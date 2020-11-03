@@ -28,11 +28,11 @@ const callbacks = {}
 
 
 
-// callbacks.jwt = async (token, user, account, profile) => {
-//   if (token) {
-//     return Promise.resolve({ ...token, ...user, ...account, ...profile });
-//   }
-// }
+callbacks.jwt = async (token, user, account, profile) => {
+  if (token) {
+    return Promise.resolve({ ...token, ...user, ...account, ...profile });
+  }
+}
 
 callbacks.session = async (session, user, sessionToken) => {
   console.log(user)
